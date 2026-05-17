@@ -6,7 +6,10 @@ session/weekly usage bars on claude.ai.
 Reads Claude's own SSE stream and `/usage` endpoint directly —
 no third-party extensions required. No data leaves your browser.
 
-![TokeniZer panel](<img width="1907" height="903" alt="6" src="https://github.com/user-attachments/assets/243e3910-2fd8-4e52-a499-27aafa7d3a8f" />)
+
+| TokeniZer panel |
+| :---: |
+| <img width="1907" height="903" alt="6" src="https://github.com/user-attachments/assets/243e3910-2fd8-4e52-a499-27aafa7d3a8f" />|
 
 ---
 
