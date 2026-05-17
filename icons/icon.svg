@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1a22"/>
+      <stop offset="100%" stop-color="#0a0a0e"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#ff9a6c"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="url(#bg)"/>
+  <circle cx="64" cy="64" r="60" fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.6"/>
+
+  <!-- Token bar: 3 stacked bars -->
+  <rect x="22" y="38" width="84" height="10" rx="5" fill="rgba(255,255,255,0.06)"/>
+  <rect x="22" y="38" width="62" height="10" rx="5" fill="url(#accent)" filter="url(#glow)"/>
+
+  <rect x="22" y="57" width="84" height="10" rx="5" fill="rgba(255,255,255,0.06)"/>
+  <rect x="22" y="57" width="38" height="10" rx="5" fill="#3580ff" opacity="0.8"/>
+
+  <rect x="22" y="76" width="84" height="10" rx="5" fill="rgba(255,255,255,0.06)"/>
+  <rect x="22" y="76" width="20" height="10" rx="5" fill="#3580ff" opacity="0.5"/>
+
+  <!-- Z letter accent -->
+  <text x="88" y="116" font-family="monospace" font-weight="700" font-size="22" fill="url(#accent)" opacity="0.9">Z</text>
+</svg>

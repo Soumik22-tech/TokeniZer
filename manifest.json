@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "TokeniZer",
+  "version": "1.0.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{d8a7f9b0-1234-4a2b-9cde-abcdef123456}",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "description": "TokeniZer — approximate token and usage visualizer for claude.ai.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon48.png",
+    "48": "icons/icon48.png",
+    "96": "icons/icon128.png",
+    "128": "icons/icon128.png",
+    "256": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "TokeniZer",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon48.png",
+      "48": "icons/icon48.png",
+      "96": "icons/icon128.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://claude.ai/*"
+      ],
+      "css": [
+        "src/styles.css"
+      ],
+      "js": [
+        "src/content/constants.js",
+        "src/content/bridge-client.js",
+        "src/vendor/o200k_base.js",
+        "src/content/tokens.js",
+        "src/content/ui.js",
+        "src/content/main.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/injected/bridge.js"
+      ],
+      "matches": [
+        "https://claude.ai/*"
+      ]
+    }
+  ]
+}

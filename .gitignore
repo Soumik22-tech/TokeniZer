@@ -1,0 +1,14 @@
+# Release artifacts — generate these locally, don't commit
+*.zip
+*.crx
+*.xpi
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo

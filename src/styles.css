@@ -1,0 +1,167 @@
+/* TokeniZer widget styles */
+.tz-widget {
+	position: fixed;
+	right: 18px;
+	bottom: 18px;
+	width: 260px;
+	background: linear-gradient(180deg, #0e0e10 0%, #151415 100%);
+	color: #e8e6e4;
+	border-radius: 12px;
+	box-shadow: 0 6px 30px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.02) inset;
+	border: 1px solid rgba(255,140,0,0.06);
+	font-family: Inter, system-ui, -apple-system, Arial, sans-serif;
+	z-index: 2147483647;
+	overflow: hidden;
+	transition: width 180ms ease, border-radius 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.tz-header {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	justify-content: space-between;
+	padding: 10px 12px;
+	background: linear-gradient(90deg, rgba(255,140,0,0.06), transparent);
+	border-bottom: 1px solid rgba(255,255,255,0.02);
+}
+
+.tz-title {
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: #ff8c00;
+	font-size: 13px;
+	flex: 0 0 auto;
+}
+
+.tz-compact-status {
+	margin-left: auto;
+	font-size: 12px;
+	color: #d6d3d0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	min-width: 0;
+}
+
+.tz-collapse-btn {
+	flex: 0 0 auto;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	border: 1px solid rgba(255,255,255,0.08);
+	border-radius: 999px;
+	background: rgba(255,255,255,0.04);
+	color: #e8e6e4;
+	font: inherit;
+	line-height: 1;
+	cursor: pointer;
+	transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.tz-collapse-btn:hover {
+	background: rgba(255,140,0,0.14);
+	border-color: rgba(255,140,0,0.28);
+	transform: translateY(-1px);
+}
+
+.tz-body {
+	padding: 12px;
+	display: grid;
+	gap: 10px;
+}
+
+.tz-section-label {
+	font-size: 11px;
+	color: #bdb9b6;
+}
+
+.tz-context {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.tz-token-count {
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.tz-cache {
+	font-size: 12px;
+	color: #bdb9b6;
+}
+
+.tz-usage-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.tz-usage-meta {
+	font-size: 11px;
+	line-height: 1.3;
+	color: #bdb9b6;
+	margin-top: -2px;
+	padding-left: 2px;
+}
+
+.tz-bar {
+	--radius: 6px;
+	background: rgba(255,255,255,0.04);
+	border-radius: var(--radius);
+	height: 10px;
+	flex: 1;
+	overflow: hidden;
+	border: 1px solid rgba(255,255,255,0.02);
+}
+
+.tz-bar__fill {
+	height: 100%;
+	width: 0%;
+	background: linear-gradient(90deg, #ff8c00, #ffb66b);
+	transition: width 400ms ease, background-color 200ms ease;
+}
+
+.tz-usage-label {
+	font-size: 12px;
+	min-width: 60px;
+	color: #d6d3d0;
+}
+
+.tz-footer {
+	padding: 8px 12px;
+	border-top: 1px solid rgba(255,255,255,0.02);
+	font-size: 11px;
+	color: #9d9a98;
+}
+
+.tz-widget--collapsed {
+	width: auto;
+	min-width: 220px;
+	border-radius: 999px;
+	box-shadow: 0 10px 28px rgba(0,0,0,0.55), 0 1px 0 rgba(255,255,255,0.02) inset;
+}
+
+.tz-widget--collapsed .tz-header {
+	padding: 8px 10px;
+	border-bottom: 0;
+	background: linear-gradient(90deg, rgba(255,140,0,0.08), rgba(255,255,255,0.01));
+}
+
+.tz-widget--collapsed .tz-body,
+.tz-widget--collapsed .tz-footer {
+	display: none;
+}
+
+.tz-widget--collapsed .tz-compact-status {
+	max-width: 150px;
+}
+
+/* Small helpers */
+.tz-muted { color: #9d9a98; }
+.tz-hidden { display: none !important; }
+
+/* Keep legacy classes to avoid breaking other scripts */
+.cc-hidden { display: none !important; }
+.cc-bar { }
+.cc-bar__fill { }
